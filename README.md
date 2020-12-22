@@ -3,9 +3,10 @@
 Unofficial CLI for the Red Trinity Hymnal.
 
 ```
-hymnal play 100  # play the 100th hymn
+hymnal ls                  # list all hymns
+hymnal play 100            # play the 100th hymn
 hymnal play 100 --preview  # play the first 5 seconds of the hymn
-hymnal play random  # play a random hymn
+hymnal play random         # play a random hymn
 ```
 
 ## Attributions
