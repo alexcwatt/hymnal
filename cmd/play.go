@@ -75,7 +75,7 @@ func play(hymn int, preview bool) error {
 	for _, f := range archive.File {
 		if f.Name[4:7] == fmt.Sprintf("%03d", hymn) {
 			hymn_data := data.Hymns[hymn-1]
-			fmt.Printf("Playing Hymn #%d: %s (%s)\n", hymn, hymn_data.Title, hymn_data.Author)
+			fmt.Printf("Playing Hymn %s\n", hymn_data)
 			rc, err := f.Open()
 			if err != nil {
 				fmt.Println("Unable to open MP3 file.")

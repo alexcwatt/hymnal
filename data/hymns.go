@@ -38,6 +38,14 @@ type Hymn struct {
 	Author string
 }
 
+func (hymn Hymn) String() string {
+	if hymn.Author != "" {
+		return fmt.Sprintf("#%d: %s (%s)", hymn.Number, hymn.Title, hymn.Author)
+	} else {
+		return fmt.Sprintf("#%d: %s", hymn.Number, hymn.Title)
+	}
+}
+
 var Hymns []Hymn
 var ZipPath string
 

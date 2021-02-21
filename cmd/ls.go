@@ -29,11 +29,7 @@ var lsCmd = &cobra.Command{
 	Short: "List all hymns",
 	Run: func(cmd *cobra.Command, args []string) {
 		for _, hymn := range data.Hymns {
-			fmt.Printf("%03d %s", hymn.Number, hymn.Title)
-			if hymn.Author != "" {
-				fmt.Printf(" (%s)", hymn.Author)
-			}
-			fmt.Print("\n")
+			fmt.Printf("%s\n", hymn)
 		}
 	},
 }
