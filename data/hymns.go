@@ -17,6 +17,7 @@ package data
 
 import (
 	"bufio"
+	"embed"
 	"encoding/csv"
 	"fmt"
 	"io"
@@ -27,6 +28,9 @@ import (
 	"strconv"
 	"strings"
 )
+
+//go:embed index.csv
+var content embed.FS
 
 type Hymn struct {
 	Number int
@@ -90,10 +94,7 @@ func getMP3s() {
 }
 
 func loadHymns() {
-	// TODO: This doesn't work if the command `hymnal` is run from a different spot
-	// Look into https://github.com/GeertJohan/go.rice
-	csvpath := filepath.Join("data", "index.csv")
-	csvfile, err := os.Open(csvpath)
+	csvfile, err := content.Open("index.csv")
 	defer csvfile.Close()
 	if err != nil {
 		log.Fatalln("Couldn't open hymnal index")
