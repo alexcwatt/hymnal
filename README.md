@@ -13,3 +13,8 @@ hymnal play random         # play a random hymn
 
 * Hymnal index courtesay of [Trinity Hymnal Index](https://trinityhymnalindex.wordpress.com/bynumber/)
 * MP3 files courtesy of the [OPC Hymnal Site](https://www.opc.org/hymnal.html)
+
+## Roadmap
+
+* Shortcodes (e.g., "abide" = 402, "doxo" = 732)
+* Playlists
